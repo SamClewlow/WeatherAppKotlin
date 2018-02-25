@@ -13,15 +13,6 @@ import java.text.DateFormat
  */
 class ExtensionTests {
 
-    @Test fun testLongToDateString() {
-        assertEquals("19-Oct-2015", 1445275635000L.toDateString(DateFormat.MEDIUM))
-    }
-
-    @Test fun testDateStringFullFormat() {
-        assertEquals("Monday, 19 October 2015",
-                1445275635000L.toDateString(DateFormat.FULL))
-    }
-
     @Test fun testDataSourceReturnsValue() {
         val ds = mock(ForecastDataSource::class.java)
         whenever(ds.requestDayForecast(0)).then {
